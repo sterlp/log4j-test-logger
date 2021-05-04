@@ -61,6 +61,14 @@ public class TestAppender extends AbstractAppender {
     public static int count(Level level) {
         return getLogs(level).size();
     }
+    
+    public static int count(Level level, Level... levels) {
+        int result = getLogs(level).size();
+        for (Level l : levels) {
+            result += getLogs(l).size();
+        }
+        return result;
+    }
 
     public static Optional<String> first(Level info, String logMessage) {
         final List<String> logs = getLogs(info);

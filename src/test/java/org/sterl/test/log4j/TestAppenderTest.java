@@ -34,12 +34,14 @@ class TestAppenderTest {
         LOG.error("Hello test logger ERROR2!");
         
         assertEquals(2, TestAppender.count(Level.ERROR));
+        assertEquals(3, TestAppender.count(Level.ERROR, Level.WARN));
         assertEquals(4, TestAppender.count());
         
         assertFalse(TestAppender.first(Level.INFO, "logger WARN").isPresent());
         assertTrue(TestAppender.first(Level.WARN, "logger WARN").isPresent());
         
         assertTrue(TestAppender.first(Level.ERROR, "ERROR2").isPresent());
+        
     }
 
 }
