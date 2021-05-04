@@ -34,6 +34,7 @@ Simple in memory log4j2 appender to assert logs in JUnit tests.
             <groupId>org.sterl.test.log4j</groupId>
             <artifactId>log4j-test-logger</artifactId>
             <version>0.1.0</version>
+            <scope>test</scope>
         </dependency>
 ```
 
