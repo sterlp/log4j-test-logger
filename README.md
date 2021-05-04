@@ -1,3 +1,5 @@
+[![Java CI with Maven](https://github.com/sterlp/log4j-test-logger/actions/workflows/maven.yml/badge.svg)](https://github.com/sterlp/log4j-test-logger/actions/workflows/maven.yml)
+
 # log4j-test-logger
 Simple in memory log4j2 appender to assert logs in JUnit tests.
 
@@ -32,10 +34,11 @@ Simple in memory log4j2 appender to assert logs in JUnit tests.
             <groupId>org.sterl.test.log4j</groupId>
             <artifactId>log4j-test-logger</artifactId>
             <version>0.1.0</version>
+            <scope>test</scope>
         </dependency>
 ```
 
-## Configuration log42.xml
+## Configuration log4j2.xml
 
 In your `src/test/resources` add or extend the log4j file:
 
