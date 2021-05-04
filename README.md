@@ -1,3 +1,5 @@
+[![Java CI with Maven](https://github.com/sterlp/log4j-test-logger/actions/workflows/maven.yml/badge.svg)](https://github.com/sterlp/log4j-test-logger/actions/workflows/maven.yml)
+
 # log4j-test-logger
 Simple in memory log4j2 appender to assert logs in JUnit tests.
 
