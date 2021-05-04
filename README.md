@@ -37,7 +37,7 @@ Simple in memory log4j2 appender to assert logs in JUnit tests.
         </dependency>
 ```
 
-## Configuration log42.xml
+## Configuration log4j2.xml
 
 In your `src/test/resources` add or extend the log4j file:
 
