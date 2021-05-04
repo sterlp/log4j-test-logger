@@ -1,7 +1,6 @@
 package org.sterl.test.log4j;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 import java.util.concurrent.ConcurrentHashMap;
@@ -41,17 +40,7 @@ public class TestAppender extends AbstractAppender {
 
     @Override
     public void append(LogEvent event) {
-        final Level level = event.getLevel();
-        List<String> messages = LOGS.get(level);
-        if (messages == null) {
-            synchronized (LOGS) {
-                messages = LOGS.get(level);
-                if (messages == null) {
-                    messages = Collections.synchronizedList(new ArrayList<>());
-                    LOGS.put(level, messages);
-                }
-            }
-        }
+        final List<String> messages = LOGS.computeIfAbsent(event.getLevel(), (l) -> new ArrayList<>());
         messages.add(event.getMessage().getFormattedMessage());
     }
     /**

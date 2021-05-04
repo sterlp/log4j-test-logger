@@ -22,6 +22,14 @@
     </properties>
 
     <inceptionYear>2017</inceptionYear>
+    
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>https://raw.githubusercontent.com/sterlp/log4j-test-logger/main/LICENSE</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
 
     <developers>
         <developer>
