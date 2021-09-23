@@ -3,6 +3,9 @@
 # log4j-test-logger
 Simple in memory log4j2 appender to assert logs in JUnit tests.
 
+# Alternative if you use Spring
+https://docs.spring.io/spring-boot/docs/current/api/org/springframework/boot/test/system/OutputCaptureExtension.html
+
 # Usage
 
 ```java
